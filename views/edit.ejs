@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <h1 class="text-center title-1">Editar Clientes </h1>
+        <% userlist.forEach(function(user){ %>
+          <form action="/edit/<%=user._id%>" method="post">
+
+            <p>nome:<input type="text" value="<%= user.name %>" name="name" /></p>
+            <p>email:<input type="text" value="<%= user.email %>" name="email" /></p>
+            <br />
+            <p><button type="submit" value="Editar">SALVAR</button>
+            <button type="submit" value="Voltar">VOLTAR</button></p>
+         </form>
+<% }); %>
+</body>
+</html>

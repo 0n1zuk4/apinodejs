@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+ <h1 class="text-center title-1"> Lista de Usuarios </h1>
+ <table border="1">
+   <thead>
+     <tr>
+       <td>Nome:</td>
+       <td>Email:</td>
+     </tr>
+  </thead>
+  <tbody>
+    <% userlist.forEach(function(user){ %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><a href="/edit/<%=user._id%>">Editar</a> - <a href="/delete/<%=user._id%>">Deletar</a></td>
+      </tr>
+    <%})%>
+  </tbody>
+  <button> <a href="/">Voltar</a></button>
+</body>
+</html>
